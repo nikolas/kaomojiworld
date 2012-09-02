@@ -1,0 +1,23 @@
+<h1>Listing mojis</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mojis.each do |moji| %>
+  <tr>
+    <td><%= moji.content %></td>
+    <td><%= link_to 'Show', moji %></td>
+    <td><%= link_to 'Edit', edit_moji_path(moji) %></td>
+    <td><%= link_to 'Destroy', moji, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Moji', new_moji_path %>

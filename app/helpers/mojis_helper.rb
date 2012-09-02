@@ -1,0 +1,2 @@
+module MojisHelper
+end

@@ -1,0 +1,19 @@
+login with facebook or twitter
+
+user
+  has_many :favorite_mojis
+
+moji
+  name
+  text
+  has_many :tags
+
+tag
+  name
+
+api
+
+  /api/mojis.json
+  /api/users/1.json
+  /api/users/1/favorites.json
+  /api/mojis/1.json
