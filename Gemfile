@@ -25,6 +25,8 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'omniauth-twitter'
 
+gem 'paperclip'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
