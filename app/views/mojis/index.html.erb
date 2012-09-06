@@ -11,6 +11,7 @@
 <% @mojis.each do |moji| %>
   <tr>
     <td><%= moji.content %></td>
+    <td><b>created by:</b><%= link_to moji.user.username, "/users/#{moji.user.id}" %></b></td>
     <td><%= link_to 'Show', moji %></td>
     <td><%= link_to 'Edit', edit_moji_path(moji) %></td>
     <td><%= link_to 'Destroy', moji, method: :delete, data: { confirm: 'Are you sure?' } %></td>
