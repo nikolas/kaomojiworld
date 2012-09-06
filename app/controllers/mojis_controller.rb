@@ -42,6 +42,7 @@ class MojisController < ApplicationController
   # POST /mojis
   # POST /mojis.json
   def create
+    params[:mojj][:user_id] = current_user.id
     @moji = Moji.new(params[:moji])
 
     respond_to do |format|

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :mojis
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -19,10 +20,13 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |user|
+      logger.info auth.info
       user.provider = auth.provider
       user.uid = auth.uid
       user.username = auth.info.nickname
-      user.oauth_avatar = auth.info.image
+      logger.info auth.info.image
+      #user.oauth_avatar = auth.info.image
+      user.avatar = auth.info.image
     end
   end
 
