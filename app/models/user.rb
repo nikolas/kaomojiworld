@@ -25,8 +25,8 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.username = auth.info.nickname
       logger.info auth.info.image
-      #user.oauth_avatar = auth.info.image
-      user.avatar = auth.info.image
+      user.oauth_avatar = auth.info.image
+      #user.avatar = auth.info.image
     end
   end
 
