@@ -1,20 +1,24 @@
 class User < ActiveRecord::Base
   has_many :mojis
+  has_attached_file :avatar
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :omniauthable
 
+  # Virtual attribute for authenticating by either username or email
+  # This is in addition to a real persisted field like 'username'
+  attr_accessor :login
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login
   # attr_accessible :title, :body
 
   validates_presence_of :username
   validates_uniqueness_of :username
   #validates_uniqueness_of    :email,     :case_sensitive => false, :allow_blank => true, :if => :email_changed?
   #validates_format_of :email, :with  => Devise.email_regexp, :allow_blank => true, :if => :email_changed?
-  validates_presence_of     :password, :if => :password_required?                           
-  validates_confirmation_of :password, :if => :password_required?                           
+  validates_presence_of     :password, :if => :password_required?
+  validates_confirmation_of :password, :if => :password_required?
   validates_length_of :password, :within => Devise.password_length, :allow_blank => true
 
 
@@ -38,7 +42,7 @@ class User < ActiveRecord::Base
       end
     else
       super
-    end    
+    end
   end
 
   def password_required?
@@ -50,6 +54,15 @@ class User < ActiveRecord::Base
       update_attributes(params, *options)
     else
       super
+    end
+  end
+
+  def self.find_first_by_auth_conditions(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+    else
+      where(conditions).first
     end
   end
 
