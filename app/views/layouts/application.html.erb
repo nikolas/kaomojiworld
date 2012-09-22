@@ -5,10 +5,24 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
 
-<div id="container">
+<div class="container">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <a class="brand" href="/">Kaomojiworld(not twitter)</a>
+      <ul class="nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><%= random_moji_link %></li>
+      </ul>
+    </div>
+  </div>
   <div id="user_nav">
     <% if user_signed_in? %>
       Logged in as <%= display_avatar current_user %>

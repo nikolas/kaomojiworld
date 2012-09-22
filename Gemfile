@@ -17,6 +17,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
@@ -26,6 +27,8 @@ gem 'devise-i18n'
 gem 'omniauth-twitter'
 
 gem 'paperclip'
+
+gem 'rspec-rails', :group => [:development, :test]
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
