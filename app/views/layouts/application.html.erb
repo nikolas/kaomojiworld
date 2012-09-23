@@ -20,18 +20,18 @@
     <div class="navbar-inner">
       <a class="brand" href="/"><%= t :site_title %></a>
       <ul class="nav">
-        <li class="active"><a href="#"><%= t :home %></a></li>
-        <li><%= link_to 'New Moji', new_moji_path %></li>
+        <%= navbar_link(t(:home), root_path) %>
+        <%= navbar_link(t(:new_moji), new_moji_path) %>
         <li><%= random_moji_link %></li>
         <% if user_signed_in? %>
           <li><p><%= display_avatar current_user %></p></li>
-          <li><%= link_to current_user.username, user_path(current_user) %></li>
-          <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
-          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <%= navbar_link(current_user.username, user_path(current_user)) %>
+          <%= navbar_link(t(:edit_profile), edit_user_registration_path) %>
+          <%= navbar_link(t(:logout), destroy_user_session_path, method: :delete) %>
         <% else %>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
-          <li><%= link_to "Login", new_user_session_path %></li>
-          <li><%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %></li>
+          <%= navbar_link t(:sign_up), new_user_registration_path %>
+          <%= navbar_link t(:login), new_user_session_path %>
+          <%= navbar_link t(:sign_in_with_twitter), user_omniauth_authorize_path(:twitter) %>
         <% end %>
       </ul>
     </div>

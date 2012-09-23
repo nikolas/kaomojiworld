@@ -5,3 +5,7 @@ en:
   hello: "Hello world"
   site_title: "Kaomoji World"
   home: "Home"
+  new_moji: "New Moji"
+  login: "Login"
+  sign_up: "Sign Up"
+  sign_in_with_twitter: "Sign in with Twitter"
