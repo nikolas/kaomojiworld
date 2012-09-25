@@ -3,7 +3,9 @@ Kaomojiworld::Application.routes.draw do
 
   resources :mojis
 
-  match 'users/:id' => 'users#show'
+  resources :users do
+    get 'show'
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

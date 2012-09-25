@@ -1,3 +1,6 @@
+<h1><%= @user.username %></h1>
+<%= display_avatar @user %>
+
 <% @user.mojis.each do |m| %>
   <%= m.content %>
 <% end %>
