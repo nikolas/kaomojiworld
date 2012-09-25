@@ -4,7 +4,7 @@ class MojisController < ApplicationController
   # GET /mojis
   # GET /mojis.json
   def index
-    @mojis = Moji.all
+    @mojis = Moji.order(:created_at).page params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
