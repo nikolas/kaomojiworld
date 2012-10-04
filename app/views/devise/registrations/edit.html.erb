@@ -17,6 +17,11 @@
     <%= f.password_field :current_password %></div>
   <% end %>
 
+  <div>
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+
   <div><%= f.submit "Update" %></div>
 <% end %>
 

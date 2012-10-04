@@ -86,8 +86,12 @@ body {
   @include stripes($pink);
 }
 
-#main {
+#block {
   background: #ddd;
   @include border-radius(10px);
   padding: 10px;
+}
+
+a:hover {
+  text-decoration:none;
 }
