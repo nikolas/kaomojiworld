@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :mojis
-  has_attached_file :avatar
+  has_attached_file :avatar,
+      :styles => { :thumb => "30x30>" }
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -10,7 +11,7 @@ class User < ActiveRecord::Base
   # This is in addition to a real persisted field like 'username'
   attr_accessor :login
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :avatar
   # attr_accessible :title, :body
 
   validates_presence_of :username

@@ -16,3 +16,5 @@
 
 #swapfiles
 *.sw*
+
+public/system/*

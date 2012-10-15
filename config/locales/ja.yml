@@ -1,7 +1,8 @@
 ja:
-  site_title: "顔文字　世"
+  site_title: "顔文字世界"
   home: "ホーム"
   new_moji: "文字を投稿"
   login: "ログイン"
-  sign_up: "登録する"
-  sign_in_with_twitter: "Twitterでログイン"
+  sign_up: "Sign Up"
+  sign_in_with_twitter: "Sign in with Twitter"
+  ago: "前。"
