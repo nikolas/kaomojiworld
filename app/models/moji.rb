@@ -1,5 +1,7 @@
 class Moji < ActiveRecord::Base
   belongs_to :user
+  has_many :favorites
+  has_many :users, :through => favorites
 
   validates_length_of :content, maximum: 30
   has_many :taggings

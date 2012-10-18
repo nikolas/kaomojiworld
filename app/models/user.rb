@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_many :mojis
+  has_many :favorites
+  has_many :mojis, :through => :favorites
   has_attached_file :avatar,
       :styles => { :thumb => "30x30>" }
   # Include default devise modules. Others available are:
