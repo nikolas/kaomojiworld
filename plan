@@ -17,3 +17,10 @@ api
   /api/users/1.json
   /api/users/1/favorites.json
   /api/mojis/1.json
+
+------------------------------
+
+monetize:
+  premium subscription?
+
+  ads?
