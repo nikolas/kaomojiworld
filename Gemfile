@@ -19,6 +19,8 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'therubyracer'
+  gem 'less-rails'
   gem 'twitter-bootstrap-rails'
 
   gem 'bourbon'
@@ -31,6 +33,7 @@ gem 'devise-i18n'
 gem 'omniauth-twitter'
 
 gem 'paperclip'
+gem 'aws-sdk', '~> 1.3.4'
 
 gem 'kaminari'
 gem 'rspec-rails', :group => [:development, :test]

@@ -3,7 +3,15 @@ class User < ActiveRecord::Base
   has_many :favorites
   has_many :mojis, :through => :favorites
   has_attached_file :avatar,
-      :styles => { :thumb => "30x30>" }
+      :styles => { :thumb => "48x48>" },
+      :storage => 's3',
+      :path => "/:style/:filename",
+      :s3_credentials => {
+        :access_key_id => ENV['S3_KEY'],
+        :secret_access_key => ENV['S3_SECRET']
+      },
+      :bucket => 'kaomojiworld'
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
