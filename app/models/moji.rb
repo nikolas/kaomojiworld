@@ -3,6 +3,7 @@ class Moji < ActiveRecord::Base
   has_many :favorites
   has_many :users, :through => :favorites
 
+  validates_presence_of :content
   validates_length_of :content, maximum: 30
   has_many :taggings
   has_many :tags, through: :taggings
