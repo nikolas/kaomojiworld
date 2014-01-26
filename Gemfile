@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', github: 'rails', branch: '3-2-stable'
 
 gem 'rails-i18n'
 
