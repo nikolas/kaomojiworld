@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/nikolas/kaomojiworld.png?label=ready&title=Ready)](https://waffle.io/nikolas/kaomojiworld)
 kaomojiworld
 ============
 http://kaomojiworld.herokuapp.com
