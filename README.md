@@ -13,6 +13,6 @@ API
 ===
 The API is built for all your possible kamoji needs.
 
-/mojis/random.json      - return a random kaomoji
-/mojis/tags/kawaii.json - return kaomojis by tag
-/search?term=negi.json  - search
+* /mojis/random.json      - return a random kaomoji
+* /mojis/tags/kawaii.json - return kaomojis by tag
+* /search?term=negi.json  - search
