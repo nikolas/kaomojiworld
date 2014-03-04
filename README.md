@@ -3,6 +3,7 @@ kaomojiworld
 http://kaomojiworld.herokuapp.com
 
 [![Build Status](https://travis-ci.org/nikolas/kaomojiworld.png)](https://travis-ci.org/nikolas/kaomojiworld)
+[![Code Climate](https://codeclimate.com/github/nikolas/kaomojiworld.png)](https://codeclimate.com/github/nikolas/kaomojiworld)
 [![Stories in Ready](https://badge.waffle.io/nikolas/kaomojiworld.png?label=ready&title=Ready)](https://waffle.io/nikolas/kaomojiworld)
 
 the world of mojis
