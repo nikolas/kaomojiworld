@@ -8,11 +8,11 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap_and_overrides
  *= require_self
  */
 
 @import "bourbon";
-@import "bootstrap_and_overrides.css.less";
 @import "mojis";
 @import "omniauth_callbacks";
 @import "users";
@@ -88,7 +88,7 @@ body {
 
 #block {
   background: #ddd;
-  @include border-radius(10px);
+  border-radius: 10px;
   padding: 10px;
 }
 
