@@ -6,7 +6,6 @@ gem 'rails', '4.1.0.rc1'
 gem 'rails-i18n'
 
 gem 'pg'
-gem 'sqlite3'
 
 gem 'sass-rails'
 gem 'coffee-rails'
