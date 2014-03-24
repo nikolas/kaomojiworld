@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.1.1"
 
-gem 'rails', github: 'rails', branch: '3-2-stable'
+gem 'rails', '4.1.0.rc1'
 
 gem 'rails-i18n'
 
