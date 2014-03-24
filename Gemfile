@@ -7,7 +7,7 @@ gem 'rails-i18n'
 
 gem 'pg'
 
-gem 'sass-rails'
+gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails'
 
 gem 'uglifier', '>= 1.0.3'
