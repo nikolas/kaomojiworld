@@ -20,9 +20,6 @@ class User < ActiveRecord::Base
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
   attr_accessor :login
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :login, :avatar
-  # attr_accessible :title, :body
 
   validates_presence_of :username
   validates_uniqueness_of :username

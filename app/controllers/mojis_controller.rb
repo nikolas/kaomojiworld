@@ -42,7 +42,7 @@ class MojisController < ApplicationController
   # POST /mojis
   # POST /mojis.json
   def create
-    @moji = Moji.new(params[:moji])
+    @moji = Moji.new(moji_params)
     @moji.user_id = current_user.id
 
     respond_to do |format|
@@ -62,7 +62,7 @@ class MojisController < ApplicationController
     @moji = Moji.find(params[:id])
 
     respond_to do |format|
-      if @moji.update_attributes(params[:moji])
+      if @moji.update_attributes(moji_params)
         format.html { redirect_to @moji, notice: 'Moji was successfully updated.' }
         format.json { head :no_content }
       else
@@ -82,5 +82,10 @@ class MojisController < ApplicationController
       format.html { redirect_to mojis_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+  def moji_params
+    params.require(:moji).permit(:content)
   end
 end
