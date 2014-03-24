@@ -7,7 +7,7 @@ module MojisHelper
   def tweet_text(moji)
     if moji.user.provider == "twitter"
       "#{moji.content} - by @#{moji.user.username}"
-    else 
+    else
       "#{moji.content} - by #{moji.user.username}"
     end
   end
