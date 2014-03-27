@@ -10,8 +10,6 @@ class Moji < ActiveRecord::Base
 
   validates_uniqueness_of :content
 
-  accepts_nested_attributes_for :tags
-
   def self.random
     self.limit(1).order("RANDOM()").first #postgresql
   end
