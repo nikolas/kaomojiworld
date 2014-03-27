@@ -30,8 +30,7 @@ gem 'kaminari'
 gem 'rspec-rails', :group => [:development, :test]
 
 group :test do
-  # database_cleaner is not required, but highly recommended
-  gem 'database_cleaner'
+  gem 'database_rewinder'
 end
 
 gem 'rails_12factor'
