@@ -13,5 +13,6 @@ module MojisHelper
   end
 
   def display_tags tags
+    tags.map(&:name).join(', ')
   end
 end
