@@ -1,0 +1,10 @@
+<div class='moji'>
+  <div class='moji-content'><%= link_to moji.content, moji %></div>
+  <br/>
+  <br/>
+  <b>created by: </b><%= link_to moji.user.username, "/users/#{moji.user.id}" %>
+  <%= display_avatar moji.user %>
+  <%= "#{time_ago_in_words(moji.created_at)}#{t(:ago)}"  %>
+  <br />
+  <b>Tags: </b><%= display_tags moji.tags %>
+</div>

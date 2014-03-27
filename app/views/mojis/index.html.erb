@@ -10,12 +10,7 @@
   </tr>
 
 <% @mojis.each do |moji| %>
-  <tr>
-    <td><%= link_to moji.content, moji %></td>
-    <td><b>created by:</b><%= link_to moji.user.username, "/users/#{moji.user.id}" %></b></td>
-    <td><%= display_avatar moji.user %></td>
-    <td><%= "#{time_ago_in_words(moji.created_at)}#{t(:ago)}"  %></td>
-  </tr>
+  <%= render moji %>
 <% end %>
 </table>
 
