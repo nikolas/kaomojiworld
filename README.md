@@ -2,8 +2,11 @@ kaomojiworld
 ============
 http://kaomojiworld.herokuapp.com
 
-[![Build Status](https://travis-ci.org/nikolas/kaomojiworld.png)](https://travis-ci.org/nikolas/kaomojiworld)
-[![Code Climate](https://codeclimate.com/github/nikolas/kaomojiworld.png)](https://codeclimate.com/github/nikolas/kaomojiworld)
+[![Build Status](https://img.shields.io/travis/nikolas/kaomojiworld.svg)][travis]
+[![Code Climate](https://img.shields.io/codeclimate/github/nikolas/kaomojiworld.svg)][codeclimate]
+
+[travis]: https://travis-ci.org/nikolas/kaomojiworld
+[codeclimate]: https://codeclimate.com/github/nikolas/kaomojiworld
 
 the world of mojis
 
