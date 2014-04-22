@@ -6,5 +6,9 @@
   <%= display_avatar moji.user %>
   <%= "#{time_ago_in_words(moji.created_at)}#{t(:ago)}"  %>
   <br />
+  <button data-clipboard-target='fe_text' data-clipboard-text='<%= moji.content %>' id='d_clip_button' title='Click me to copy to clipboard.'>
+    <b>Copy Moji to Clipboard...</b>
+  </button>
+  <br />
   <b>Tags: </b><%= display_tags moji.tags %>
 </div>

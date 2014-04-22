@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require zeroclipboard
 //= require_tree .
+
+$(document).ready(function() {
+  var clip = new ZeroClipboard($("#d_clip_button"))
+});
